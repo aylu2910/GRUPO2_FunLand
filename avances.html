@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avances</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -13,11 +13,16 @@
   <header class="header">
     <nav class="nav">
       <div class="logo">🎢 FunLand</div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="avances.html">Avances</a></li>
         <li><a href="proyecto.html">Proyecto</a></li>
       </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
   <section id="avances" class="section fade-in">
@@ -67,6 +72,11 @@
           <h4>Logo Preliminar</h4>
           <div style="font-size: 2rem; color: #ff6b6b;">🎢 FunLand</div>
         </div>
+
+        <div>
+          <h4>Prototipo</h4>
+          <a href="https://www.figma.com/design/0wSEDCiDgUDDA386JECFqL/Untitled?node-id=0-1&p=f" target="_blank">Link a Figma</a>
+        </div>
       </div>
     </div>
 
@@ -88,6 +98,16 @@
             Eventos</div>
           <div style="background: #667eea; color: white; padding: 0.5rem 1rem; border-radius: 10px;">📞
             Contacto</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group-info">
+      <h3 style="color: #4ecdc4; margin-bottom: 1rem;">🎨 Prototipo</h3>
+
+      <div style="display: grid; gap: 2rem;">
+          <h4>Wireframes de las páginas principales.</h4>
+          <a href="https://www.figma.com/design/0wSEDCiDgUDDA386JECFqL/Untitled?node-id=0-1&p=f" target="_blank">Link a Figma</a>
         </div>
       </div>
     </div>
@@ -125,7 +145,11 @@
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+  <footer class="footer">
+    <p>&copy; 2025 FunLand - Grupo 2 | Diseño y Desarrollo Web | Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
