@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Entradas - Parque Mágico de Navidad</title>
+    <link rel="stylesheet" href="css/universalChristmasStyles.css">
+    <link rel="stylesheet" href="css/entradas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="universalChristmas.html" class="logo">
+                <i class="fas fa-tree"></i>
+                Parque Mágico de Navidad
+            </a>
+            <ul class="nav-links">
+                <li><a href="universalChristmas.html#about">Sobre Nosotros</a></li>
+                <li><a href="universalChristmas.html#schedule">Horarios</a></li>
+                <li><a href="universalChristmas.html#attractions">Atracciones</a></li>
+                <li><a href="universalChristmas.html#accessibility">Accesibilidad</a></li>
+                <li><a href="universalChristmas.html#contact">Contacto</a></li>
+                <li><a href="entradas.html" class="buy-tickets-btn">Comprar Tickets</a></li>
+            </ul>
+        </div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!-- Navegación -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎫 Compra tus Entradas</h1>
+            <p>Elige la opción perfecta para vivir la magia navideña</p>
+        </header>
+
+        <!-- Tickets Grid -->
+        <div class="tickets-grid">
+            <!-- Entrada Individual -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <h2>Entrada Individual</h2>
+                    <div class="ticket-price">$25</div>
+                    <p class="ticket-description">Perfecto para una visita individual</p>
+                </div>
+                <ul class="ticket-features">
+                    <li><i class="fas fa-check"></i> Acceso a todas las atracciones</li>
+                    <li><i class="fas fa-check"></i> Show de luces navideñas</li>
+                    <li><i class="fas fa-check"></i> Foto con Santa Claus</li>
+                    <li><i class="fas fa-check"></i> Mapa del parque incluido</li>
+                </ul>
+                <div class="quantity-controls">
+                    <button class="qty-btn" onclick="changeQuantity('individual', -1)">-</button>
+                    <input type="number" id="individual-qty" class="qty-input" value="0" readonly>
+                    <button class="qty-btn" onclick="changeQuantity('individual', 1)">+</button>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('individual', 'Entrada Individual', 25)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+
+            <!-- Pase Familiar -->
+            <div class="ticket-card featured">
+                <div class="ticket-header">
+                    <h2>Pase Familiar</h2>
+                    <div class="ticket-price">$80</div>
+                    <div class="savings">Ahorra $20</div>
+                    <p class="ticket-description">Ideal para familias de hasta 4 personas</p>
+                </div>
+                <ul class="ticket-features">
+                    <li><i class="fas fa-check"></i> 4 entradas incluidas</li>
+                    <li><i class="fas fa-check"></i> Fast Pass para atracciones</li>
+                    <li><i class="fas fa-check"></i> Comida gratis para niños</li>
+                    <li><i class="fas fa-check"></i> Estacionamiento VIP</li>
+                    <li><i class="fas fa-check"></i> Descuento 10% en tiendas</li>
+                </ul>
+                <div class="quantity-controls">
+                    <button class="qty-btn" onclick="changeQuantity('family', -1)">-</button>
+                    <input type="number" id="family-qty" class="qty-input" value="0" readonly>
+                    <button class="qty-btn" onclick="changeQuantity('family', 1)">+</button>
+                </div>
+                <button class="add-to-cart-btn featured" onclick="addToCart('family', 'Pase Familiar', 80)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+
+            <!-- Entrada Niños -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <h2>Entrada Niños</h2>
+                    <div class="ticket-price">$15</div>
+                    <p class="ticket-description">Para niños de 3 a 12 años</p>
+                </div>
+                <ul class="ticket-features">
+                    <li><i class="fas fa-check"></i> Todas las atracciones infantiles</li>
+                    <li><i class="fas fa-check"></i> Show especial para niños</li>
+                    <li><i class="fas fa-check"></i> Globo navideño de regalo</li>
+                    <li><i class="fas fa-check"></i> Actividades en el taller</li>
+                </ul>
+                <div class="quantity-controls">
+                    <button class="qty-btn" onclick="changeQuantity('kids', -1)">-</button>
+                    <input type="number" id="kids-qty" class="qty-input" value="0" readonly>
+                    <button class="qty-btn" onclick="changeQuantity('kids', 1)">+</button>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('kids', 'Entrada Niños', 15)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart-section">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Carrito de Compras</h2>
+                <div class="cart-count" id="cart-count">0</div>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Tu carrito está vacío</p>
+                    <p>¡Agrega algunas entradas para comenzar!</p>
+                </div>
+            </div>
+
+            <div class="cart-summary" id="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Impuestos (8%):</span>
+                    <span id="taxes">$0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0</span>
+                </div>
+
+                <button class="checkout-btn" id="checkout-btn" disabled>
+                    <i class="fas fa-credit-card"></i> Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="academic-section">
+            <div class="academic-content">
+                <div class="university-info">
+                    <img src="img/LogoUADE.png" alt="Logo UADE" class="university-logo">
+                    <div class="academic-text">
+                        <p class="course-info">Trabajo grupal - Materia Diseño y Desarrollo Web (Curso X - Grupo Y)</p>
+                        <p class="group-link">
+                            <a href="ENLACE_DEL_GRUPO" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Sitio del Grupo
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <h4>Integrantes del Grupo:</h4>
+                    <ul class="members-list">
+                        <li>Nombre Apellido 1</li>
+                        <li>Nombre Apellido 2</li>
+                        <li>Nombre Apellido 3</li>
+                        <li>Nombre Apellido 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/entradas.js"></script>
+</body>
+
+</html>
