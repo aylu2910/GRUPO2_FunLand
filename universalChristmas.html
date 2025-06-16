@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parque Mágico de Navidad - Donde la Magia Nunca Termina</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/universalChristmasStyles.css">
+</head>
+
+<body>
+  <!-- Navegación -->
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fas fa-tree"></i>
+        Parque Mágico de Navidad
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#schedule">Horarios</a></li>
+        <li><a href="#attractions">Atracciones</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#accessibility">Accesibilidad</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#tickets" class="buy-tickets-btn">Comprar Tickets</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>¡Vive la Magia de la Navidad Todo el Año!</h1>
+      <p>Descubre un mundo de diversión, alegría y espíritu navideño en el parque temático más mágico del mundo</p>
+      <div class="cta-buttons">
+        <a href="#tickets" class="cta-primary">Comprar Tickets Ahora</a>
+        <a href="#attractions" class="cta-secondary">Explorar Atracciones</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Información General -->
+  <section id="about">
+    <h2 class="section-title">Bienvenidos al Parque Mágico</h2>
+    <div class="info-grid">
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-snowflake"></i> Nuestra Historia</h3>
+        <p>Desde 1995, hemos sido el destino favorito para familias que buscan experimentar la magia de la Navidad.
+          Nuestro parque nació del sueño de crear un lugar donde la alegría navideña nunca termine.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-star"></i> Misión</h3>
+        <p>Crear experiencias inolvidables que unan a las familias y mantengan vivo el espíritu navideño durante todo el
+          año, promoviendo valores de amor, generosidad y alegría.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
+        <p>Estamos ubicados en el corazón de la ciudad, con fácil acceso desde todas las principales autopistas. Av.
+          Navidad 2525, Ciudad Mágica.</p>
+      </div>
+    </div>
+
+    <!-- Mapa Interactivo -->
+    <div class="map-container fade-in">
+      <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Encuéntranos</h3>
+      <div class="map-placeholder">
+        <i class="fas fa-map" style="font-size: 3rem; color: #999;"></i>
+        <p>Mapa Interactivo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horarios -->
+  <section id="schedule">
+    <h2 class="section-title">Horarios y Calendario</h2>
+    <div class="info-grid">
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-clock"></i> Horario Regular</h3>
+        <p><strong>Lunes a Viernes:</strong> 10:00 AM - 8:00 PM<br>
+          <strong>Sábados y Domingos:</strong> 9:00 AM - 10:00 PM
+        </p>
+      </div>
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-calendar-alt"></i> Días Festivos</h3>
+        <p>Abierto todos los días festivos con horario extendido hasta las 11:00 PM. ¡La magia nunca descansa!</p>
+      </div>
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-gift"></i> Eventos Especiales</h3>
+        <p>Celebraciones especiales el 25 de cada mes con shows exclusivos y sorpresas para toda la familia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tickets -->
+  <section id="tickets">
+    <h2 class="section-title">Compra tus Tickets</h2>
+    <div class="ticket-options">
+      <div class="ticket-card fade-in">
+        <h3>Entrada Individual</h3>
+        <div class="ticket-price">$25</div>
+        <ul class="ticket-features">
+          <li>Acceso a todas las atracciones</li>
+          <li>Show de luces navideñas</li>
+          <li>Foto con Santa Claus</li>
+        </ul>
+        <a href="#" class="submit-btn">Comprar Ahora</a>
+      </div>
+
+      <div class="ticket-card featured fade-in">
+        <h3>Pase Familiar</h3>
+        <div class="ticket-price">$80</div>
+        <p style="margin-bottom: 1rem;">¡Mejor Valor!</p>
+        <ul class="ticket-features">
+          <li>4 entradas (ahorra 20%)</li>
+          <li>Fast Pass incluido</li>
+          <li>Comida gratis para niños</li>
+          <li>Estacionamiento VIP</li>
+        </ul>
+        <a href="#" class="submit-btn" style="background: var(--accent-gold); color: var(--dark-text);">Comprar
+          Ahora</a>
+      </div>
+
+      <div class="ticket-card fade-in">
+        <h3>Pase Anual</h3>
+        <div class="ticket-price">$199</div>
+        <ul class="ticket-features">
+          <li>Acceso ilimitado todo el año</li>
+          <li>20% descuento en tiendas</li>
+          <li>Eventos exclusivos</li>
+          <li>Invitado gratis mensual</li>
+        </ul>
+        <a href="#" class="submit-btn">Comprar Ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accesibilidad -->
+  <section id="accessibility">
+    <h2 class="section-title">Accesibilidad para Todos</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem;">
+      Creemos que la magia de la Navidad debe ser accesible para todos. Nuestro parque está diseñado pensando en la
+      inclusión.
+    </p>
+    <div class="accessibility-features">
+      <div class="accessibility-card fade-in">
+        <i class="fas fa-wheelchair"></i>
+        <h3>Acceso para Sillas de Ruedas</h3>
+        <p>Todas nuestras atracciones y áreas son accesibles</p>
+      </div>
+      <div class="accessibility-card fade-in">
+        <i class="fas fa-sign-language"></i>
+        <h3>Intérpretes de Señas</h3>
+        <p>Disponibles para shows y eventos especiales</p>
+      </div>
+      <div class="accessibility-card fade-in">
+        <i class="fas fa-braille"></i>
+        <h3>Guías en Braille</h3>
+        <p>Mapas y menús disponibles en Braille</p>
+      </div>
+      <div class="accessibility-card fade-in">
+        <i class="fas fa-baby-carriage"></i>
+        <h3>Alquiler de Equipos</h3>
+        <p>Sillas de ruedas y cochecitos disponibles</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atracciones -->
+  <section id="attractions">
+    <h2 class="section-title">Atracciones Mágicas</h2>
+    <div class="attractions-gallery">
+      <div class="attraction-card fade-in">
+        <div class="attraction-image">🎢</div>
+        <div class="attraction-info">
+          <h3>Montaña Rusa de Santa</h3>
+          <p>¡Vuela con el trineo de Santa en nuestra emocionante montaña rusa familiar!</p>
+        </div>
+      </div>
+      <div class="attraction-card fade-in">
+        <div class="attraction-image">🎠</div>
+        <div class="attraction-info">
+          <h3>Carrusel de Renos</h3>
+          <p>Un mágico carrusel con los renos de Santa que encantará a los más pequeños.</p>
+        </div>
+      </div>
+      <div class="attraction-card fade-in">
+        <div class="attraction-image">❄️</div>
+        <div class="attraction-info">
+          <h3>Reino de Hielo</h3>
+          <p>Patina en nuestra pista de hielo rodeada de esculturas navideñas.</p>
+        </div>
+      </div>
+      <div class="attraction-card fade-in">
+        <div class="attraction-image">🎭</div>
+        <div class="attraction-info">
+          <h3>Teatro Mágico</h3>
+          <p>Shows en vivo con personajes navideños cada hora.</p>
+        </div>
+      </div>
+      <div class="attraction-card fade-in">
+        <div class="attraction-image">🍪</div>
+        <div class="attraction-info">
+          <h3>Fábrica de Galletas</h3>
+          <p>Aprende a hacer las famosas galletas de jengibre con los elfos.</p>
+        </div>
+      </div>
+      <div class="attraction-card fade-in">
+        <div class="attraction-image">🎁</div>
+        <div class="attraction-info">
+          <h3>Taller de Santa</h3>
+          <p>Visita el taller donde los elfos crean juguetes mágicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Adicionales -->
+  <section id="services">
+    <h2 class="section-title">Servicios y Comodidades</h2>
+    <div class="info-grid">
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-utensils"></i> Restaurantes</h3>
+        <p>5 restaurantes temáticos con comida para todos los gustos, incluyendo opciones veganas y sin gluten.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-shopping-bag"></i> Tiendas</h3>
+        <p>Encuentra el regalo perfecto en nuestras 10 tiendas temáticas con productos exclusivos del parque.</p>
+      </div>
+      <div class="info-card fade-in">
+        <h3><i class="fas fa-parking"></i> Estacionamiento</h3>
+        <p>Amplio estacionamiento gratuito con servicio de transporte al parque cada 10 minutos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2 class="section-title">Preguntas Frecuentes</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Puedo llevar comida al parque?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Sí, permitimos el ingreso de snacks y bebidas no alcohólicas. También contamos con áreas de picnic
+            designadas para las familias.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Hay descuentos para grupos grandes?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>¡Por supuesto! Grupos de 15 o más personas reciben un 25% de descuento. Contáctanos para más información.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Las mascotas son bienvenidas?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Las mascotas de servicio son bienvenidas en todo el parque. Otras mascotas pueden visitar nuestras áreas
+            designadas pet-friendly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact">
+    <h2 class="section-title">Contáctanos</h2>
+    <div class="contact-form">
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#tickets">Comprar Tickets</a></li>
+          <li><a href="#attractions">Atracciones</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Información</h3>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Trabaja con Nosotros</a></li>
+          <li><a href="#">Prensa</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+          <li><i class="fas fa-envelope"></i> info@parquenavidadmagica.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Av. Navidad 2525, Ciudad Mágica</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Parque Mágico de Navidad. Todos los derechos reservados. 🎄</p>
+    </div>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget">
+    <div class="chat-button" onclick="openChat()">
+      <i class="fas fa-comments"></i>
+    </div>
+  </div>
+
+  <!-- Snowfall Effect -->
+  <div id="snow-container"></div>
+
+  <script>
+    // Snowfall Effect
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.innerHTML = '❄';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+      snowflake.style.opacity = Math.random();
+      document.getElementById('snow-container').appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    }
+
+    setInterval(createSnowflake, 100);
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    // FAQ Toggle
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+
+      answer.classList.toggle('active');
+      icon.classList.toggle('active');
+    }
+
+    // Form Submit Handler
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert('¡Gracias por tu mensaje! Te contactaremos pronto. 🎄');
+      event.target.reset();
+    }
+
+    // Chat Widget
+    function openChat() {
+      alert('¡Chat en vivo disponible pronto! 🎅');
+    }
+
+    // Fade In Animation on Scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 100) {
+        nav.style.background = 'rgba(0, 131, 65, 0.95)';
+        nav.style.backdropFilter = 'blur(20px)';
+      } else {
+        nav.style.background = 'var(--primary-green)';
+        nav.style.backdropFilter = 'blur(10px)';
+      }
+    });
+  </script>
+</body>
+
+</html>
