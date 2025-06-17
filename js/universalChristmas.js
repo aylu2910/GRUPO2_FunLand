@@ -86,7 +86,6 @@ function initializeSnowfall() {
     }
 
     snowInterval = setInterval(createSnowflake, CONFIG.SNOWFLAKE_INTERVAL);
-    console.log('Snowfall initialized ❄️');
 }
 
 // Mobile Menu Toggle
@@ -106,7 +105,6 @@ function toggleMobileMenu() {
         menuButton.setAttribute('aria-expanded', isActive);
     }
 
-    console.log(`Mobile menu ${isActive ? 'opened' : 'closed'}`);
 }
 
 // FAQ Toggle
@@ -132,7 +130,6 @@ function toggleFaq(element) {
     const isExpanded = answer.classList.contains('active');
     element.setAttribute('aria-expanded', isExpanded);
 
-    console.log(`FAQ toggled: ${isExpanded ? 'expanded' : 'collapsed'}`);
 }
 
 // Form Submit Handler
@@ -178,7 +175,6 @@ function openChat() {
     }
 
     alert('¡Chat en vivo disponible pronto! 🎅');
-    console.log('Chat widget opened');
 }
 
 // Fade In Animation on Scroll
@@ -204,7 +200,6 @@ function initializeScrollAnimations() {
         observer.observe(el);
     });
 
-    console.log(`Observing ${fadeElements.length} fade-in elements`);
 }
 
 // Smooth Scrolling
@@ -232,7 +227,6 @@ function initializeSmoothScrolling() {
         });
     });
 
-    console.log(`Initialized smooth scrolling for ${anchors.length} anchors`);
 }
 
 // Navbar scroll effect
@@ -253,7 +247,6 @@ const handleNavbarScroll = debounce(function () {
 
 // Initialize all functionality
 function initializeApp() {
-    console.log('🎄 Initializing Christmas Park Website...');
 
     try {
         // Initialize all features
@@ -269,7 +262,6 @@ function initializeApp() {
             console.log('Window resized, adjusting snowfall...');
         }, 250));
 
-        console.log('✅ All features initialized successfully!');
 
     } catch (error) {
         console.error('❌ Error initializing app:', error);
