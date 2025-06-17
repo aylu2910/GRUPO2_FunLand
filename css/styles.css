@@ -380,10 +380,7 @@ a.logo:hover::before {
   z-index: 2;
   max-width: 900px;
   padding: 2rem;
-  background: rgba(0, 48, 24, 0.3);
-  backdrop-filter: blur(10px);
   border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 {
