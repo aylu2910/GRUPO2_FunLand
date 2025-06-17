@@ -346,33 +346,6 @@ section {
   color: var(--accent-gold);
 }
 
-/* Accessibility Section */
-.accessibility-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.accessibility-card {
-  background: var(--snow-white);
-  border-radius: 15px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.accessibility-card:hover {
-  transform: scale(1.05);
-}
-
-.accessibility-card i {
-  font-size: 3rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
-}
-
 /* Attractions Gallery */
 .attractions-gallery {
   display: grid;
