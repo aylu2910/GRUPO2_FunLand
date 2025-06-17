@@ -502,15 +502,6 @@ a.logo:hover::before {
   min-height: 200px;
 }
 
-.member-card::before {
-  content: '🎁';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2rem;
-  opacity: 0.3;
-  animation: float 3s ease-in-out infinite;
-}
 
 @keyframes float {
 
@@ -831,4 +822,10 @@ a.logo:hover::before {
   .hamburger {
     display: flex;
   }
+}
+
+.avances-subtitle {
+  color: #C8102E;
+  margin-bottom: 1rem;
+
 }
