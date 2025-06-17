@@ -4,20 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FunLand - El Parque de Diversiones Más Emocionante</title>
+    <title>UniversalChristmas - Grupo 2 | Desarrollo Web</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Decoraciones navideñas -->
+    <div class="holly holly-1">🎄</div>
+    <div class="holly holly-2">🎅</div>
+
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">🎢 FunLand</div>
+            <a href="#home" class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <span class="main-text">UniversalChristmas</span>
+                    <span class="sub-text">Parque Mágico</span>
+                </div>
+            </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="avances.html">Avances</a></li>
-                <li><a  target="_blank"
-                        href="universalChristmas.html">Sitio del Proyecto</a></li>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="avances.html">📊 Avances</a></li>
+                <li><a target="_blank" href="universalChristmas.html">🎄 Sitio del Proyecto</a></li>
             </ul>
 
             <div class="hamburger" id="hamburger">
@@ -26,54 +36,74 @@
                 <span></span>
             </div>
         </nav>
-
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 style="visibility: hidden;">Grupo 2 - Desarrollo Web</h1>
+        <!-- Luces navideñas -->
+        <div class="christmas-lights">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+
+        <div class="hero-content fade-in">
+            <h1>Grupo 2 - Desarrollo Web</h1>
             <!-- Sección Home (Información del Grupo) -->
-            <section class="section fade-in">
-                <h2 class="section-title">Grupo 2 - Desarrollo Web</h2>
+            <section class="section">
+                <h2 class="section-title">🎁 Nuestro Equipo Navideño 🎁</h2>
                 <div class="group-info">
                     <div class="group-members">
                         <div class="member-card">
                             <h3>Integrante 1</h3>
                             <p>Coria, Juan Cruz</p>
-                            <a target="_blank" href="https://jcoria23.github.io/UVA2TPO/sobremi.html"
-                                style="color: #4ecdc4;">Ver Portafolio</a>
+                            <a target="_blank" href="https://jcoria23.github.io/UVA2TPO/sobremi.html">
+                                <i class="fas fa-star"></i> Ver Portafolio
+                            </a>
                         </div>
                         <div class="member-card">
                             <h3>Integrante 2</h3>
                             <p>Orellana, Aylén Jorgelina</p>
                             <a target="_blank"
-                                href="https://aylu2910.github.io/ORELLANA_1124248_26042025_UVA2/sobremi.html"
-                                style="color: #4ecdc4;">Ver Portfolio</a>
+                                href="https://aylu2910.github.io/ORELLANA_1124248_14062025_PARCIAL2/sobremi.html">
+                                <i class="fas fa-star"></i> Ver Portfolio
+                            </a>
                         </div>
                         <div class="member-card">
                             <h3>Integrante 3</h3>
                             <p>Oven, Santiago Agustin</p>
                             <a target="_blank"
-                                href="https://santiagooven.github.io/Entrega-obligatoria-UVA2/Sobremi.html"
-                                style="color: #4ecdc4;">Ver Portfolio</a>
+                                href="https://santiagooven.github.io/Entrega-obligatoria-UVA2/Sobremi.html">
+                                <i class="fas fa-star"></i> Ver Portfolio
+                            </a>
                         </div>
                         <div class="member-card">
                             <h3>Integrante 4</h3>
                             <p>Páez De Miguel, Daniela</p>
-                            <a target="_blank" href="https://dpaezdemiguel.github.io/UVA3TP3/"
-                                style="color: #4ecdc4;">Ver Portfolio</a>
+                            <a target="_blank" href="https://dpaezdemiguel.github.io/UVA3TP3/">
+                                <i class="fas fa-star"></i> Ver Portfolio
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 UniversalChristmas - Grupo 2 | Diseño y Desarrollo Web | Todos los derechos reservados</p>
     </footer>
+
+    <!-- Efecto de nieve -->
+    <div id="snow-container"></div>
 
     <script src="js/script.js"></script>
 </body>
