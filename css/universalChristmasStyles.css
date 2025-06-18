@@ -46,6 +46,202 @@ body {
   pointer-events: none;
 }
 
+/* Logo Navideño */
+a.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--snow-white);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: logoRotate 8s linear infinite;
+}
+
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(5deg) scale(1.1);
+  }
+
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  75% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.logo-icon::before {
+  content: '🎄';
+  position: absolute;
+  font-size: 2.5rem;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px rgba(0, 131, 65, 0.8));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--accent-gold) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glow 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.logo-text .main-text {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, var(--snow-white), var(--accent-gold), var(--snow-white));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+  letter-spacing: 1px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.logo-text .sub-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--accent-gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: -5px;
+  position: relative;
+}
+
+.logo-text .sub-text::before,
+.logo-text .sub-text::after {
+  content: '•';
+  color: var(--primary-red);
+  margin: 0 8px;
+  font-size: 1rem;
+  animation: blink 2s ease-in-out infinite;
+}
+
+.logo-text .sub-text::after {
+  animation-delay: 1s;
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+a.logo:hover {
+  transform: scale(1.05);
+}
+
+a.logo:hover .logo-icon::before {
+  animation: bounce 0.5s ease-in-out;
+}
+
+a.logo:hover .logo-text .main-text {
+  animation-duration: 1s;
+}
+
+a.logo:hover .logo-icon::after {
+  animation-duration: 1s;
+}
+
+a.logo:hover::before {
+  animation: twinkle 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.2) rotate(-10deg);
+  }
+
+  75% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+
 /* Navigation */
 nav {
   background: var(--primary-green);
@@ -95,16 +291,13 @@ nav {
   position: relative;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  /* Añade bordes redondeados */
 }
 
 
 
 .nav-links a:hover {
   background-color: var(--accent-gold);
-  /* Cambia el fondo al pasar el cursor */
   color: var(--dark-color);
-  /* Cambia el color del texto para contraste */
 }
 
 
