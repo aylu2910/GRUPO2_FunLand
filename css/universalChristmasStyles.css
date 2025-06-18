@@ -420,15 +420,6 @@ section {
   position: relative;
 }
 
-.section-title::after {
-  content: '🎄';
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-}
-
 /* Info Cards */
 .info-grid {
   display: grid;
