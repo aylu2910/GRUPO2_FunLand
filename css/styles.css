@@ -438,9 +438,8 @@ a.logo:hover::before {
   }
 }
 
-/* Sección del grupo con temática navideña */
+/* Sección con temática navideña */
 .section {
-  padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
