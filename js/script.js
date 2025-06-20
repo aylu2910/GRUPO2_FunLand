@@ -80,42 +80,63 @@ window.addEventListener("scroll", () => {
 });
 
 // ==========================================
-// MENU HAMBURGUESA
+// HAMBURGER MENU - FIXED VERSION
 // ==========================================
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("navLinks");
 
   if (hamburger && navLinks) {
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
+    // Toggle menu when hamburger is clicked
+    hamburger.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
 
-      // Animar las líneas del hamburger
-      const spans = hamburger.querySelectorAll("span");
-      if (navLinks.classList.contains("active")) {
-        spans[0].style.transform = "rotate(45deg) translateY(8px)";
-        spans[1].style.opacity = "0";
-        spans[2].style.transform = "rotate(-45deg) translateY(-8px)";
-      } else {
-        spans[0].style.transform = "none";
-        spans[1].style.opacity = "1";
-        spans[2].style.transform = "none";
-      }
+      // Toggle active class on both elements
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("active");
+
+      console.log("Menu toggled:", navLinks.classList.contains("active"));
     });
 
-    // Cerrar menú al hacer click fuera
+    // Close menu when clicking on a nav link
+    const navLinkItems = navLinks.querySelectorAll("a");
+    navLinkItems.forEach((link) => {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+      });
+    });
+
+    // Close menu when clicking outside
     document.addEventListener("click", function (event) {
+      // Check if click is outside hamburger and nav
       if (
         !hamburger.contains(event.target) &&
         !navLinks.contains(event.target)
       ) {
         navLinks.classList.remove("active");
-        const spans = hamburger.querySelectorAll("span");
-        spans[0].style.transform = "none";
-        spans[1].style.opacity = "1";
-        spans[2].style.transform = "none";
+        hamburger.classList.remove("active");
       }
     });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
+    });
+
+    // Handle window resize - close menu if switching to desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768) {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
+    });
+  } else {
+    console.error("Hamburger or NavLinks not found!");
   }
 });
 
@@ -230,14 +251,3 @@ function limitSnowflakes() {
 
 // Verificar cada 5 segundos
 setInterval(limitSnowflakes, 5000);
-
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-
-  if (hamburger && navLinks) {
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-  }
-});
