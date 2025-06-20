@@ -80,7 +80,7 @@ window.addEventListener("scroll", () => {
 });
 
 // ==========================================
-// HAMBURGER MENU - FIXED VERSION
+// HAMBURGER MENU 
 // ==========================================
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
