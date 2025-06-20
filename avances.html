@@ -9,15 +9,26 @@
 </head>
 
 <body>
+  <!-- Decoraciones navideñas -->
+  <div class="holly holly-1">🎄</div>
+  <div class="holly holly-2">🎅</div>
+
   <!-- Header -->
   <header class="header">
     <nav class="nav">
-      <div class="logo">🎢 FunLand</div>
+      <a href="#home" class="logo">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+          <span class="main-text">UniversalChristmas</span>
+          <span class="sub-text">Parque Mágico</span>
+        </div>
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="avances.html">Avances</a></li>
-        <li><a target="_blank" href="universalChristmas.html">Sitio del Proyecto</a></li>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="avances.html">📊 Avances</a></li>
+        <li><a target="_blank" href="universalChristmas.html">🎄 Sitio del Proyecto</a></li>
       </ul>
+
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -31,9 +42,11 @@
     <!-- Propuesta del Proyecto -->
     <div class="group-info">
       <h3 class="avances-subtitle">📋 Propuesta del Proyecto</h3>
-      <p><strong>Actividad Principal:</strong> FunLand es un parque de diversiones familiar que ofrece atracciones
-        emocionantes, espectáculos en vivo y experiencias gastronómicas únicas para visitantes de todas las
-        edades.</p>
+      <p><strong>Actividad Principal:</strong> UniversalChristmas es un parque temático navideño que ofrece experiencias
+        mágicas durante todo el
+        año. Incluye atracciones temáticas de navidad, espectáculos navideños en vivo, talleres con duendes, encuentros
+        con
+        Papa Noel y una experiencia gastronómica única con sabores tradicionales de la época.</p>
 
       <p style="margin-top: 1rem;"><strong>Objetivos del Sitio Web:</strong></p>
       <ul style="margin-left: 2rem; margin-top: 0.5rem;">
@@ -44,7 +57,8 @@
       </ul>
 
       <p style="margin-top: 1rem;"><strong>Público Objetivo:</strong> Familias con niños de 5-15 años, jóvenes
-        adultos de 18-35 años buscando entretenimiento, y turistas visitando la región.</p>
+        adultos de 18-35 años buscando entretenimiento, abuelos que desean crear recuerdos especiales con sus nietos
+        durante la Navidad y CUALQUIER FAN DE LA NAVIDAD!</p>
     </div>
 
     <!-- Identidad Visual -->
@@ -70,15 +84,77 @@
 
         <div>
           <h4>Logo Preliminar</h4>
-          <div style="font-size: 2rem; color: #ff6b6b;">🎢 FunLand</div>
+          <div style="
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            font-family: Arial, sans-serif;
+            max-width: 4rem;
+            height: 3rem;
+          ">
+            <!-- Logo Icon Mini -->
+            <div style="
+              position: relative;
+              width: 2.5rem;
+              height: 2.5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            ">
+              <div style="
+                position: absolute;
+                font-size: 1.8rem;
+                z-index: 2;
+                filter: drop-shadow(0 0 5px rgba(0, 131, 65, 0.8));
+              ">🎄</div>
+              <div style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle, #FFD700 0%, transparent 70%);
+                border-radius: 50%;
+                opacity: 0.4;
+                z-index: 1;
+              "></div>
+            </div>
+
+            <!-- Logo Text Mini -->
+            <div style="
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            ">
+              <span style="
+                font-size: 0.9rem;
+                font-weight: 900;
+                background: linear-gradient(45deg, #C8102E, #FFD700, #008341);
+                background-size: 200% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 0.5px;
+                line-height: 1;
+              ">UniversalChristmas</span>
+              <span style="
+                font-size: 0.4rem;
+                font-weight: 400;
+                color: #FFD700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                opacity: 0.9;
+                margin-top: -2px;
+              ">PARQUE MÁGICO</span>
+            </div>
+          </div>
         </div>
 
         <div>
           <h4>Prototipo mobile</h4>
-          <a href="https://www.figma.com/design/32IfTnxgwMzQFA5lkR3CNa/Prototipo-Movil?node-id=0-1&t=cbcSB5P79h82UOix-1" target="_blank">Link a
+          <a href="https://www.figma.com/design/32IfTnxgwMzQFA5lkR3CNa/Prototipo-Movil?node-id=0-1&t=cbcSB5P79h82UOix-1"
+            target="_blank">Link a
             Figma</a>
           <h4>Prototipo desktop</h4>
-          <a href="https://www.figma.com/design/YhieWTYTYD1MbLiSHsx41S/Prototipo-Escritorio-0?node-id=0-1&t=i61bQaNAhm0gCjXx-1" target="_blank">Link a
+          <a href="https://www.figma.com/design/YhieWTYTYD1MbLiSHsx41S/Prototipo-Escritorio-0?node-id=0-1&t=i61bQaNAhm0gCjXx-1"
+            target="_blank">Link a
             Figma</a>
         </div>
       </div>
