@@ -12,7 +12,7 @@
 
 <body>
     <!-- Navegación -->
-    <nav>
+    <nav class="nav-flex">
         <div class="nav-container">
             <a href="universalChristmas.html" class="logo">
                 <div class="logo-icon"></div>
@@ -29,9 +29,11 @@
                 <li><a href="entradas.html" class="buy-tickets-btn">Comprar Tickets</a></li>
             </ul>
         </div>
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
+        <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     </nav>
     <!-- Navegación -->
     <div class="container">
@@ -177,6 +179,8 @@
         </div>
     </footer>
     <script src="js/entradas.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/universalChristmas.js"></script>
 </body>
 
 </html>

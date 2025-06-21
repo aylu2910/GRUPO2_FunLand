@@ -335,6 +335,8 @@ nav {
   padding: 10px;
   z-index: 1002;
   position: relative;
+  background: none;
+  border: none;
 }
 
 .hamburger span {
@@ -346,6 +348,7 @@ nav {
   display: block;
 }
 
+
 .hamburger:hover span:nth-child(1) {
   background: var(--primary-red);
 }
@@ -356,6 +359,21 @@ nav {
 
 .hamburger:hover span:nth-child(3) {
   background: var(--primary-green);
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: var(--accent-gold);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  background: var(--accent-gold);
 }
 
 /* Hero Section */
@@ -896,6 +914,10 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* FAQ Accordion */
@@ -950,11 +972,14 @@ footer {
   color: var(--primary-red);
 }
 
-/* MOBILE STYLES - RESPONSIVE MEJORADO */
 @media (max-width: 1024px) {
   .hamburger {
+    margin-right: 40px;
+  }
+
+  .nav-flex{
     display: flex;
-    margin-left: auto
+    align-items: center;
   }
 
   .nav-links {
@@ -962,7 +987,7 @@ footer {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 70%;
+    width: 100%;
     background: var(--primary-green);
     flex-direction: column;
     padding: 2rem;
@@ -1010,19 +1035,16 @@ footer {
     border-color: var(--accent-gold);
   }
 
-  /* Hamburger animation when active */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    background: var(--accent-gold);
+  /* Buy tickets button in mobile menu */
+  .nav-links .buy-tickets-btn {
+    background: var(--primary-red);
+    color: var(--snow-white);
+    margin-top: 1rem;
   }
 
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-    background: var(--accent-gold);
+  .nav-links .buy-tickets-btn:hover {
+    background: #a00d26;
+    color: var(--snow-white);
   }
 
   @keyframes slideDown {
@@ -1031,7 +1053,6 @@ footer {
       transform: translateY(-30px);
       visibility: hidden;
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
@@ -1039,37 +1060,9 @@ footer {
     }
   }
 
-  .nav-container {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    gap: 1rem
-  }
-
-  /* TICKET CARDS RESPONSIVE */
-  .ticket-options {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-
-  .ticket-card {
-    padding: 2rem;
-    min-height: auto;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-
-  .ticket-card.featured {
-    transform: none;
-    order: -1;
-  }
-
-  .submit-btn {
-    padding: 1.2rem 2rem;
-    font-size: 1rem;
-    min-height: 56px;
-    border-radius: 12px;
+  /* Adjust hero section for mobile */
+  .hero {
+    margin-top: 140px;
   }
 
   .hero h1 {
@@ -1084,22 +1077,15 @@ footer {
     font-size: 2rem;
   }
 
-  .academic-content {
-    flex-direction: column;
-    text-align: center;
+  /* Fix navigation height for mobile */
+  nav {
+    height: auto;
+    min-height: 80px;
   }
 
-  .university-info {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .university-logo {
-    height: 50px;
-  }
-
-  .members-list {
-    align-items: center;
+  .nav-container {
+    height: auto;
+    min-height: 80px;
   }
 }
 
@@ -1142,170 +1128,305 @@ footer {
     font-size: 0.95rem;
   }
 
-  /* TICKET CARDS TABLET */
-  .ticket-card {
-    padding: 1.5rem;
-    border-radius: 15px;
-  }
-
-  .ticket-price {
-    font-size: 2.5rem;
-    margin: 0.8rem 0;
-  }
-
-  .submit-btn {
-    padding: 1rem 1.5rem;
-    font-size: 0.95rem;
-    min-height: 52px;
-    border-radius: 10px;
-    font-weight: 600;
-  }
-
-  .ticket-features {
-    margin: 1rem 0 1.5rem 0;
-  }
-
-  /* CONTACT FORM */
-  .contact-form {
-    padding: 2rem;
-  }
-
-  .contact-form .submit-btn {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+  .hero {
+    margin-top: 80px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .section {
-    padding: 2rem 1rem;
+  .hero p {
+    font-size: 1.1rem;
   }
 
-  .academic-content {
-    gap: 20px;
-    text-align: center;
-  }
-
-  .university-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .university-logo {
-    max-width: 60px;
-    max-height: 60px;
+  section {
+    padding: 3rem 1rem;
   }
 }
 
 /* Mobile Small (480px and down) */
 @media (max-width: 480px) {
-  .ticket-options {
-    padding: 0 0.5rem;
+  .nav-container {
+    padding: 0.5rem 1rem;
   }
 
-  .ticket-card {
-    padding: 1.25rem;
-    max-width: 100%;
+  .logo-text .main-text {
+    font-size: 1.1rem;
   }
 
-  .ticket-price {
-    font-size: 2rem;
-    margin: 0.6rem 0;
+  .logo-text .sub-text {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
   }
 
-  .submit-btn {
-    padding: 0.9rem 1rem;
-    font-size: 0.9rem;
-    min-height: 48px;
-    border-radius: 8px;
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
-  .ticket-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .ticket-features li {
-    padding: 0.3rem 0;
-    font-size: 0.9rem;
-  }
-
-  /* CONTACT FORM SMALL */
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .contact-form .submit-btn {
-    padding: 0.9rem 1.5rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .academic-section {
-    padding: 1.5rem 0;
-    margin: 1.5rem 0;
-  }
-
-  .academic-content {
+  .hero p {
+    font-size: 1rem;
     padding: 0 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
-  .university-info {
-    gap: 0.75rem;
+  .cta-primary,
+  .cta-secondary {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
   }
 
-  .university-logo {
-    height: 40px;
+  section {
+    padding: 2rem 1rem;
   }
 
-  .academic-text {
-    gap: 0.25rem;
-  }
-
-  .course-info {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-
-  .group-link a {
-    font-size: 12px;
-  }
-
-  .team-members h4 {
-    font-size: 14px;
-    margin-bottom: 0.75rem;
-  }
-
-  .members-list {
-    gap: 0.15rem;
-  }
-
-  .members-list li {
-    font-size: 12px;
-    padding: 0.1rem 0;
+  .section-title {
+    font-size: 1.8rem;
   }
 }
 
+/* Fix for touch devices */
 @media (hover: none) and (pointer: coarse) {
-  .submit-btn:hover {
-    transform: none;
+  .hamburger:hover span:nth-child(1),
+  .hamburger:hover span:nth-child(2),
+  .hamburger:hover span:nth-child(3) {
+    background: var(--snow-white);
   }
 
-  .submit-btn:active {
-    transform: scale(0.98);
-    transition: transform 0.1s ease;
+  .hamburger:active span {
+    background: var(--accent-gold);
+  }
+}@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
   }
 
-  .ticket-card:hover {
-    transform: none;
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-green);
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+    animation: slideDown 0.3s ease-out;
+    list-style: none;
+    margin: 0;
+    z-index: 998;
   }
 
-  .ticket-card.featured:hover {
-    transform: none;
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1.2rem 1.5rem;
+    margin: 0.3rem 0;
+    border-radius: 12px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--snow-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background: var(--accent-gold);
+    color: var(--dark-text);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    border-color: var(--accent-gold);
+  }
+
+  /* Buy tickets button in mobile menu */
+  .nav-links .buy-tickets-btn {
+    background: var(--primary-red);
+    color: var(--snow-white);
+    margin-top: 1rem;
+  }
+
+  .nav-links .buy-tickets-btn:hover {
+    background: #a00d26;
+    color: var(--snow-white);
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+      visibility: hidden;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+
+  /* Adjust hero section for mobile */
+  .hero {
+    margin-top: 140px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Fix navigation height for mobile */
+  nav {
+    height: auto;
+    min-height: 80px;
+  }
+
+  .nav-container {
+    height: auto;
+    min-height: 80px;
+  }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    padding: 5px 10px;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-icon::before {
+    font-size: 2rem;
+  }
+
+  .logo-text .main-text {
+    font-size: 1.3rem;
+  }
+
+  .logo-text .sub-text {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+
+  .nav-links {
+    padding: 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    padding: 1rem 1.2rem;
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    margin-top: 80px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Mobile Small (480px and down) */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo-text .main-text {
+    font-size: 1.1rem;
+  }
+
+  .logo-text .sub-text {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Fix for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hamburger:hover span:nth-child(1),
+  .hamburger:hover span:nth-child(2),
+  .hamburger:hover span:nth-child(3) {
+    background: var(--snow-white);
+  }
+
+  .hamburger:active span {
+    background: var(--accent-gold);
   }
 }
