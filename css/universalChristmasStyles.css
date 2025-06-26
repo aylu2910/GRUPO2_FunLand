@@ -624,11 +624,20 @@ section {
 .attraction-image {
   width: 100%;
   height: 250px;
-  background: linear-gradient(45deg, var(--primary-red), var(--primary-green));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.attraction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .attraction-image img {
+  transform: scale(1.1);
 }
 
 .attraction-info {
